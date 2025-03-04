@@ -1,0 +1,13 @@
+<div class="container">
+    <fieldset>
+      <legend>Your Contribution</legend>
+      <div *ngIf="errorMessage" class="error">
+        <p>{{ errorMessage }}</p>
+      </div>
+      <div *ngIf="!errorMessage">
+        <p>Database Contribution: {{ databaseContribution }}</p>
+        <p>Blockchain Contribution: {{ blockchainContribution }}</p>
+      </div>
+    </fieldset>
+  </div>
+  

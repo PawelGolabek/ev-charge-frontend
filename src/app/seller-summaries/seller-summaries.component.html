@@ -1,0 +1,31 @@
+<div>
+  <fieldset>
+    <legend>Podsumowania Sprzedawców</legend>
+
+    <button (click)="refreshDashboard()" class="btn btn-secondary">Załaduj ponownie</button>
+
+    <div *ngFor="let summary of summaries">
+      <div class="summary">
+        <p>Seller Address: {{ summary.seller.user_address }}</p>
+        <p>Role: {{ summary.seller.role }}</p>
+        <p>Balance: {{ summary.seller.balance }}</p>
+        <p>Contribution: {{ summary.seller.contribution }}</p>
+        <p>Total Demand: {{ summary.total_demand }}</p>
+        <p>Total Amount Owed: {{ summary.total_amount_owed }}</p>
+        <p>Start Date: {{ summary.start_date }}</p>
+        <p>End Date: {{ summary.end_date }}</p>
+        <p>Created At: {{ summary.created_at }}</p>
+        <p>Zapłacono: {{ summary.paid }}</p>
+        <button *ngIf="!summary.paid" (click)="paySeller(summary.id)" class="btn btn-primary">Wypłać</button>
+      </div>
+    </div>
+    
+    <div *ngIf="isLoading" class="loading">
+      <p>Loading...</p>
+    </div>
+
+  </fieldset>
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

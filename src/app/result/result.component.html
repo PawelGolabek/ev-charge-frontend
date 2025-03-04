@@ -1,0 +1,14 @@
+<div *ngIf="data && data.length > 0; else noData">
+    <h2>Results:</h2>
+    <ul *ngIf="!data.message">
+    <li *ngFor="let item of data">
+        ID: {{ item.id }}, Client Address: {{ item.client_address }}, Charger Address: {{ item.charger_address }}, 
+        Total Cost: {{ item.total_cost }}, Demand: {{ item.demand }}, Is Completed: {{ item.is_completed }}, 
+        Charger Owner: {{ item.charger_owner }}
+    </li>
+    </ul>
+    <p *ngIf="data.message">{{ data.message }}</p>
+</div>
+<ng-template #noData>
+    <p>No items available.</p>
+</ng-template>

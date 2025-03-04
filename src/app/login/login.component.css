@@ -1,0 +1,29 @@
+div{
+    padding: 1rem;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+    margin-left: 2rem;  
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input{
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+}

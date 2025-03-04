@@ -1,0 +1,52 @@
+
+button {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input{
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+}
+
+select {
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+option {
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+}
+
+option:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}

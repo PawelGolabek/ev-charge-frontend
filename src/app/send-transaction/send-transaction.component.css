@@ -1,0 +1,25 @@
+
+button {
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+    padding: 8px;
+    margin: 10px 0;
+    width: 200px;
+}
+.long-input{
+    width: 800px;
+}
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }

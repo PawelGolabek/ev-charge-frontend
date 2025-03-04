@@ -1,0 +1,17 @@
+<div>
+    <fieldset>
+      <legend>Doładuj konto</legend>
+      <form (ngSubmit)="onIncreaseBalance()">
+        <label for="amount">Kwota w wei:</label>
+        <input type="number" id="amount" [(ngModel)]="amount" name="amount" required>
+        <button type="submit">Doładuj</button>
+      </form>
+      <div *ngIf="successMessage">
+        <p>{{ successMessage }}</p>
+      </div>
+      <div *ngIf="errorMessage">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </fieldset>
+  </div>
+  

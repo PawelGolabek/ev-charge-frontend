@@ -1,0 +1,33 @@
+<div class="container">
+    <fieldset>
+      <legend>Add User</legend>
+      <form (ngSubmit)="onAddUser()">
+        <div class="form-group">
+          <label for="userAddress">User Address</label>
+          <input
+            type="text"
+            id="userAddress"
+            [(ngModel)]="userAddress"
+            name="userAddress"
+            class="form-control"
+            required
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" [(ngModel)]="role" name="role" class="form-control">
+            <option value="Admin">Admin</option>
+            <option value="Seller">Seller</option>
+            <option value="Client">Client</option>
+          </select>
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Add User</button>
+  
+        <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+      </form>
+    </fieldset>
+  </div>
+  

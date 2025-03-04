@@ -1,0 +1,25 @@
+<div class="container">
+    <fieldset>
+      <legend>Update Charger Price</legend>
+      <form (ngSubmit)="onUpdatePrice()">
+        <div class="form-group">
+          <label for="chargerAddress">Charger Address</label><br>
+          <input type="text" id="chargerAddress" [(ngModel)]="chargerAddress" name="chargerAddress" required class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="newPricePerKwh">New Price per kWh</label><br>
+          <input type="number" id="newPricePerKwh" [(ngModel)]="newPricePerKwh" name="newPricePerKwh" required class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Update Price
+        </button>
+      </form>
+      <div *ngIf="successMessage" class="success">
+        <p>{{ successMessage }}</p>
+      </div>
+      <div *ngIf="errorMessage" class="error">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </fieldset>
+  </div>
+  

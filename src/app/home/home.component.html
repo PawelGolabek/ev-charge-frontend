@@ -1,0 +1,90 @@
+
+  <div class = "mainContainer">
+    <div class="container">
+        <!-- Inputs for signAndSendUser function -->
+        <h3>Dodawanie użytkownika</h3>
+        <label for="userAddress">Adres użytkownika:</label>
+        <input id="userAddress" type="text" placeholder="Wprowadź adres użytkownika">
+        
+        <label for="role">Rola:</label>
+        <input id="role" type="number" placeholder="Wprowadź rolę (0: Brak, 1: Administrator, 2: Sprzedawca, 3: Klient)">
+        
+        <input id="signMessage" type="button" value="Podpisz i wyślij wiadomość" onclick="signAndSendUserFromInput()">
+        <br><br>
+        
+        <!-- Input for signAndSendUserTest function -->
+        <label for="userAddressTest">Adres użytkownika (Test):</label>
+        <input id="userAddressTest" type="text" placeholder="Wprowadź adres użytkownika">
+  
+        <label for="roleTest">Rola (Test):</label>
+        <input id="roleTest" type="number" placeholder="Wprowadź rolę (0: Brak, 1: Administrator, 2: Sprzedawca, 3: Klient)">
+        
+        <input id="signMessageTest" type="button" value="Podpisz i wyślij wiadomość (Test)" onclick="signAndSendUserTestFromInput()">
+        <br> <br> 
+        
+        <!-- Inputs for addChargerTest function -->
+        <h3>Dodaj ładowarkę</h3>
+        <label for="chargerAddress">Adres ładowarki:</label>
+        <input id="chargerAddress" type="text" placeholder="Wprowadź adres ładowarki">
+        
+        <label for="pricePerKWh">Cena za kWh:</label>
+        <input id="pricePerKWh" type="number" placeholder="Wprowadź cenę za kWh">
+  
+        <input id="addChargerButton" type="button" value="Dodaj ładowarkę" onclick="addChargerTestFromInput()">
+        <br><br>
+  
+        <!-- Inputs for completeChargingTest function -->
+        <h3>Finalizacja ładowania</h3>
+        <label for="chargerAddressComplete">Adres ładowarki:</label>
+        <input id="chargerAddressComplete" value = "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199" type="text" placeholder="Wprowadź adres ładowarki">
+  
+        <label for="clientAddress">Adres klienta:</label>
+        <input id="clientAddress" value="0xdD2FD4581271e230360230F9337D5c0430Bf44C0" type="text" placeholder="Wprowadź adres klienta">
+        
+  
+        <input id="completeChargingButton" type="button" value="Zakończ ładowanie" onclick="completeChargingTestFromInput()">
+        <br><br>
+  
+        <!-- Inputs for validateClientTest function -->
+        <h3>Walidacja klienta / Rozpoczęcie ładowania</h3>
+        <label for="clientAddressValidate">Adres klienta:</label>
+        <input id="clientAddressValidate" value="0xdD2FD4581271e230360230F9337D5c0430Bf44C0" type="text" placeholder="Wprowadź adres klienta">
+        
+        <label for="chargerAddressValidate">Adres ładowarki:</label>
+        <input id="chargerAddressValidate" value="0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199" type="text" placeholder="Wprowadź adres ładowarki">
+        
+        <label for="demandValidate">Zapotrzebowanie (kWh):</label>
+        <input id="demandValidate" value = "20" type="number" placeholder="Wprowadź zapotrzebowanie (kWh)">
+        <br>
+        <input id="validateClientButton" type="button" value="Waliduj klienta" onclick="validateClientTestFromInput()">
+        <br><br>
+        
+        <!-- Inputs for increase Balance function -->
+        <h3>Zwiększ saldo</h3>
+        <label for="ethAmountIncrease">Kwota ETH:</label>
+        <input id="ethAmountIncrease" type="number" step="0.01" placeholder="Wprowadź kwotę ETH">
+  
+        <input type="button" value="Zwiększ saldo" onclick="increaseBalance()">
+        <br><br>
+  
+        <br><br>
+        
+    </div>
+  
+    <!-- Sekcja wyników -->
+    <div class="container">
+        <!-- Przycisk połączenia -->
+        <input id="connect" type="button" value="Połącz" onclick="Connect()">
+        <input id="listUsers" type="button" value="Lista użytkowników" onclick="listUsers()">
+        <input id="listTransactionsButton" type="button" value="Lista transakcji" onclick="listTransactions()">
+        <input type="button" value="Sprawdź saldo" onclick="checkBalance()">
+        <input type="button" value="Sprawdź checkContribution" onclick="checkContribution()">
+        <app-signing></app-signing>
+        <app-all-results [data]="resultData"></app-all-results>
+        
+        <br><br>
+  
+        <h3>Wyniki</h3>
+        <pre id="resultOutput" class = "output">Brak wyników...</pre>
+    </div>
+  </div>

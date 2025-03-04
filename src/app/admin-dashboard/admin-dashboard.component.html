@@ -1,0 +1,19 @@
+<body>
+    <app-topbar></app-topbar>
+  <div class="main-container">
+    <div>
+      <h2>Zalogowano jako: admin</h2>
+      <div class = "mainContainer">
+        <div class="container">
+            <app-admin-summaries></app-admin-summaries>
+            <app-add-user></app-add-user>
+        </div>
+        <div class="container">
+          <app-seller-summaries (refreshDashboard)="onDashboardRefresh()" #adminDashboard ></app-seller-summaries>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+</body>

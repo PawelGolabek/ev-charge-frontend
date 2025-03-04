@@ -1,0 +1,16 @@
+    <fieldset>
+      <legend>My Chargers</legend>
+      <ul *ngIf="chargers.length > 0; else noChargers">
+        <li *ngFor="let charger of chargers" class="charger-item">
+          <p>Address: {{ charger.charger_address }}</p>
+          <p>Price per kWh: {{ charger.price_per_kwh }}</p>
+        </li>
+      </ul>
+      <ng-template #noChargers>
+        <p>You don't have any chargers yet.</p>
+      </ng-template>
+      <div *ngIf="errorMessage" class="error">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </fieldset>
+  

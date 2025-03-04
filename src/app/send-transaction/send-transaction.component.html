@@ -1,0 +1,10 @@
+
+<fieldset>
+    <legend>Ładuj EV</legend>
+    <label  for="charger_address">Adres Ładowarki:</label><br>
+    <input class = "long-input" type="text" id="charger_address" [(ngModel)]="charger_address" name="charger_address" required><br>
+    <label for="demand">Zapotrzebowanie (kWh):</label><br>
+    <input type="text" id="demand" [(ngModel)]="demand" name="demand" required><br>
+
+    <button (click)="onClick1()">Wyślij transakcję</button><br>
+</fieldset>

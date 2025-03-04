@@ -1,0 +1,20 @@
+<body>
+  <app-topbar></app-topbar>
+<div>
+<div class="dashboard-container">
+    <h2>Zalogowano jako: klient</h2>
+    <input id="connect" type="button" value="Połącz" onclick="Connect()">
+    <br>
+    <app-send-transaction></app-send-transaction>
+    <app-increase-balance></app-increase-balance>
+
+    
+
+
+  </div>
+  <div class="dashboard-container">
+    <show-transactions (dataFetched)="handleDataFetched($event)"></show-transactions>
+
+
+  </div>
+</div></body>

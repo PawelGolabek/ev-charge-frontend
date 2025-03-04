@@ -1,0 +1,23 @@
+<div>
+    <button (click)="onClick1()">Pokaż Moje Transakcje</button>
+    <button (click)="onHideClick()" *ngIf="showTransactions">Ukryj Moje Transakcje</button> <!-- Add hide button -->
+    <div *ngIf="showTransactions && transactions.length > 0">
+      <h3>Transaction List</h3>
+      <div class="container"> <!-- Add a container div -->
+        <ul>
+          <li *ngFor="let transaction of transactions">
+            <p>ID Transakcji: {{ transaction.transaction_id }}</p>
+            <p>Adres Klienta: {{ transaction.client_address }}</p>
+            <p>Adres Ładowarki: {{ transaction.charger_address }}</p>
+            <p>Koszt całkowity: {{ transaction.total_cost }}</p>
+            <p>Ilość kWh: {{ transaction.demand }}</p>
+            <p>Adres Właściciela: {{ transaction.charger_owner }}</p>
+            <p>Data: {{ transaction.date | date: 'yyyy-MM-dd HH:mm' }}</p>
+
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
